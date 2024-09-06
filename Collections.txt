@@ -1,0 +1,94 @@
+Design database for GUVI ZEN class programme:
+
+Create Database - use guvizenclass
+
+1. User Collection:
+
+db.users.insertMany([
+    {id:1,name:'Balakrishnan',email:'krish@gmail.com',mentor_id:1},
+    {id:2,name:'Senthilvel',email:'vel@gmail.com',mentor_id:2}, 
+    {id:3,name:'Manikandan',email:'mani@gmail.com',mentor_id:2},
+    {id:4,name:'Murali',email:'Murali@gmail.com',mentor_id:2},
+    {id:5,name:'Manokaran',email:'mano@gmail.com',mentor_id:2},
+    {id:6,name:'Priya',email:'priya@gmail.com',mentor_id:2},
+    {id:7,name:'Abinaya',email:'abi@gmail.com',mentor_id:2},
+    {id:8,name:'Poorani',email:'poorani@gmail.com',mentor_id:2},
+    {id:9,name:'Lakshmi',email:'laksh@gmail.com',mentor_id:2},
+    {id:10,name:'Sakthi',email:'sakthi@gmail.com',mentor_id:2},
+    {id:11,name:'Venu',email:'venu@gmail.com',mentor_id:2},
+    {id:12,name:'Karthi',email:'karthi@gmail.com',mentor_id:2}, 
+    {id:13,name:'Manoj',email:'manoj@gmail.com',mentor_id:1},
+    {id:14,name:'Sahil',email:'Sahil@gmail.com',mentor_id:2},
+    {id:15,name:'Nandhini',email:'nandhu@gmail.com',mentor_id:2},
+    {id:66,name:'Kamal',email:'kamal@gmail.com',mentor_id:1},
+    {id:17,name:'Soniya',email:'soni@gmail.com',mentor_id:2},
+    {id:18,name:'Maahi',email:'maahi@gmail.com',mentor_id:2},
+    {id:19,name:'Veera',email:'veer@gmail.com',mentor_id:2},
+    {id:20,name:'Sakshi',email:'sakshi@gmail.com',mentor_id:2}]);
+-------------------------------------------------------------------------------
+2. Codekata Collection:
+
+db.codekata.insertMany([
+    {id:1, problem_solved:500, status:'Completed', user_id:1},
+    {id:2, problem_solved:400, status:'Completed', user_id:2},
+    {id:3, problem_solved:120, status:'Completed', user_id:3},
+    {id:4, problem_solved:250, status:'Completed', user_id:4},
+    {id:5, problem_solved:50,  status:'Completed', user_id:5},
+    {id:6, problem_solved:320, status:'Completed', user_id:6},
+    {id:7, problem_solved:150, status:'Completed', user_id:7},
+    {id:8, problem_solved:280, status:'Completed', user_id:8},
+    {id:9, problem_solved:480, status:'Completed', user_id:9},
+    {id:10, problem_solved:160, status:'Completed', user_id:10}]);
+-------------------------------------------------------------------------------
+3. Attendance Collection:
+
+db.attendance.insertMany([
+    {id:1, date: new Date('2020-10-15'), status:'True', user_id:1,topic_id:1},
+    {id:2, date: new Date('2020-10-15'), status:'False', user_id:2,topic_id:6},
+    {id:3, date: new Date('2020-10-15'), status:'True', user_id:3,topic_id:4},
+    {id:4, date: new Date('2020-10-18'), status:'False', user_id:4,topic_id:1},
+    {id:5, date: new Date('2020-10-15'), status:'True', user_id:5,topic_id:1},
+    {id:6, date: new Date('2020-10-15'), status:'False', user_id:6,topic_id:2},
+    {id:7, date: new Date('2020-10-15'), status:'False', user_id:7,topic_id:6},
+    {id:8, date: new Date('2020-10-27'), status:'False', user_id:8,topic_id:1},
+    {id:9, date: new Date('2020-10-15'), status:'True', user_id:9,topic_id:2},
+    {id:10, date: new Date('2020-10-24'), status:'False', user_id:10,topic_id:3}]);
+-------------------------------------------------------------------------------
+4. Topics Collection:
+
+db.topics.insertMany([
+  {id:1, topic_name:'HTML', date: new Date('2020-10-15')},
+  {id:2, topic_name:'CSS', date: new Date('2020-10-18')},
+  {id:3, topic_name:'Java Script', date: new Date('2020-10-20')},
+  {id:4, topic_name:'Adcvanced JS', date: new Date('2020-10-22')},
+  {id:5, topic_name:'React JS', date: new Date('2020-10-24')},
+  {id:6, topic_name:'Redux', date: new Date('2020-10-25')},
+  {id:7, topic_name:'Database', date: new Date('2020-10-30')}]);
+-------------------------------------------------------------------------------
+5. Tasks Collection:
+
+db.tasks.insertMany([
+ {id:1, task_name:'HTML Task', date: new Date('2020-10-15'), submission_date:new Date('2020-10-17'),Submitted:'True',topic_id:1},
+ {id:2, task_name:'Css Task', date: new Date('2020-10-18'), submission_date:new Date('2020-11-05'),Submitted:'False', topic_id:2},
+ {id:3, task_name:'JS Task ', date: new Date('2020-10-20'), submission_date:new Date('2020-10-22'),Submitted:'True', topic_id:3},
+ {id:4, task_name:'DOM Task', date: new Date('2020-10-22'), submission_date:new Date('2020-10-24'),Submitted:'True', topic_id:4},
+ {id:5, task_name:'ReactJS Task', date: new Date('2020-10-24'), submission_date:new Date('2020-10-26'),Submitted:'True', topic_id:5},
+ {id:6, task_name:'Redux Task,', date: new Date('2020-10-25'), submission_date:new Date('2020-11-02'),Submitted:'False', topic_id:6},
+ {id:7, task_name:'SQL Task', date: new Date('2020-10-30'), submission_date:new Date('2020-11-05'),Submitted:'False', topic_id:7}]);
+-------------------------------------------------------------------------------
+6. Company Drives Collection:
+
+db.company_drives.insertMany([
+ {id:1,drive_name:'google',date: new Date('2020-10-15'),user_id:1},
+ {id:2,drive_name:'microsoft',date: new Date('2020-10-22'),user_id:5},
+ {id:3,drive_name:'amazon',date: new Date('2020-10-30'),user_id:6},
+ {id:4,drive_name:'flipkart',date: new Date('2020-11-15'),user_id:8},
+ {id:5,drive_name:'meta',date: new Date('2020-10-14'),user_id:3}]);
+-------------------------------------------------------------------------------
+7. Mentors Collections:
+
+db.mentors.insertMany([
+{id:1, mentor_name:'Sai Mohan', age:33, email:'mohan@gmail.com'},
+{id:2, mentor_name:'Rupan Chakravarthy', age:27, email:'rupan@gmail.com'}]);
+-------------------------------------------------------------------------------
+
